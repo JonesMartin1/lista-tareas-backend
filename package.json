@@ -6,7 +6,6 @@
     "dev": "ts-node src/index.ts",
     "public": "ncp ./src/public/ ./dist/public",
     "hbscopy": "ncp ./src/views/ ./dist/views",
-    "build": "npm run clean && tsc && npm run public && npm run  hbscopy",
     "clean": "rimraf ./dist"
   },
   "keywords": [],
