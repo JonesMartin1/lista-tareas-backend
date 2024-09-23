@@ -1,9 +1,9 @@
-import Aplication from './app'
+import Application from './app'
 import connect from './dataBase'
 import dotenv from 'dotenv'
 
 dotenv.config()
 
 connect();
-const app = new Aplication();
+const app = new Application();
 app.start();

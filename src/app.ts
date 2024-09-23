@@ -9,7 +9,7 @@ import indexRoutes from './routes';
 import tasksRoutes from './routes/tasks';
 
 
-class Aplication {
+class Application {
 
     app: express.Application;
 
@@ -52,4 +52,4 @@ class Aplication {
     }
 }
 
-export default Aplication
+export default Application
