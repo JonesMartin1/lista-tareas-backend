@@ -52,4 +52,7 @@ class Application {
     }
 }
 
+const app = new Application
+app.start()
+
 export default Application
