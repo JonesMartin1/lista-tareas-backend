@@ -20,7 +20,7 @@ class Aplication {
         this.routes();
     }
 
-    settings(){
+    settings() {
         this.app.set('port', 3000);
         this.app.set('views', path.join(__dirname, 'views'));
         this.app.engine('.hbs', engine({
@@ -35,19 +35,20 @@ class Aplication {
     middlewares() {
         this.app.use(morgan('dev'));
         this.app.use(express.json())
-        this.app.use(express.urlencoded({extended: false}))
+        this.app.use(express.urlencoded({ extended: false }))
     }
 
     routes() {
         this.app.use(indexRoutes);
-        this.app.use('/tasks',tasksRoutes);
-        this.app.use(express.static(path.join(__dirname,'public')))
+        this.app.use('/tasks', tasksRoutes);
+        this.app.use(express.static(path.join(__dirname, 'public')))
     }
 
     start() {
-        this.app.listen(this.app.get('port'), () => {
-            console.log('Server on port', this.app.get('port'))
-        })
+        const PORT = process.env.PORT || 3000;
+        this.app.listen(PORT, () => {
+            console.log(`Servidor en funcionamiento en el puerto ${PORT}`);
+        });
     }
 }
 
